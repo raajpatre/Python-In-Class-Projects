@@ -31,15 +31,21 @@ lar=0
 for i in range(1,len(newarr)):
     if int(newarr[i][2])>0:
         ern+=int(newarr[i][2])
+        if int(newarr[i][2])>lar:
+            lar=int(newarr[i][2])
+            ind=newarr[i][1]
     else:
         tot+=int(newarr[i][2])
-    if int(newarr[i][2])>lar:
-        lar=int(newarr[i][2])
-        ind=i
+        if int(newarr[i][2])*(-1)>lar:
+            lar=int(newarr[i][2])
+            ind=newarr[i][1]
+
 print(f"Total spent {tot*(-1)} ₹")
 print()
 print(f"Total earned {ern} ₹")
 print()
-print(f"Spent largest on {newarr[i][1]}")
+print(f"largest Transection: {ind}")
 print()
 print()
+
+
