@@ -15,7 +15,7 @@ while(True):
     match opt:
         case 'A':
             print()
-            print("Item name         Quantity       Price")#20 28 35
+            print("Item name         Quantity       Price")
             for i in range(len(item_names)):
                 print(" ",item_names[i],end="")
                 for j in range(18-len(item_names[i])):
